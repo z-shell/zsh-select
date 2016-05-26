@@ -1033,6 +1033,43 @@ done
 local list
 local selected
 
+#
+# Regain STDOUT
+#
+if [ ! -t 1 ]; then
+    # Check if can reattach to terminal
+    if [[ ! -c /dev/tty && ! -t 2 ]]; then
+        echo "No terminal available (no /dev/tty)"
+        return 1
+    fi
+
+    if [[ ! -c /dev/tty ]]; then
+        exec >&2
+    else
+        exec >/dev/tty
+    fi
+fi
+
+#
+# Regain STDERR
+#
+if [ ! -t 2 ]; then
+    # Check if can reattach to terminal
+    if [[ ! -c /dev/tty && ! -t 1 ]]; then
+        echo "No terminal available (no /dev/tty)"
+        return 1
+    fi
+
+    if [[ ! -c /dev/tty ]]; then
+        exec 2>&1
+    else
+        exec 2>/dev/tty
+    fi
+fi
+
+#
+# Regain STDIN, reading data
+#
 if [ -t 0 ]; then
     # Check if there is proper input
     if [ "$#" -lt 1 ]; then
