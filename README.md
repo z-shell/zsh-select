@@ -21,7 +21,7 @@ This limits use for interactive shells only.
 Adding following snippet to `vimrc` will provide `\f` keyboard shortcut that will
 run `zsh-select` as file-selector. Multi-term searching and approximate matching
 (`Ctrl-F`) will be available. The snippet is based on code from `selecta` github
-page.
+page (MIT license).
 
 ```vim
 " Run a given vim command on the results of fuzzy selecting from a given shell
@@ -41,6 +41,6 @@ endfunction
 
 " Find all files in all non-dot directories starting in the working directory.
 " Fuzzy select one of those. Open the selected file with :e.
-nnoremap <leader>f :call ZshSelectCommand("find * -type f", "", ":e")<cr>
+nnoremap <leader>f :call ZshSelectCommand("find * -type f 2>/dev/null", "", ":e")<cr>
 ```
 
