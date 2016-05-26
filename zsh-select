@@ -1030,8 +1030,7 @@ done
 
 #######################################################################################
 
-local list
-local selected
+local list selected
 
 #
 # Regain STDOUT
