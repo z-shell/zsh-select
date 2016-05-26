@@ -1031,6 +1031,10 @@ done
 #######################################################################################
 
 local list selected
+integer stdout_FD
+
+# Remember where to direct output
+exec {stdout_FD}>&1
 
 #
 # Regain STDOUT
@@ -1117,7 +1121,7 @@ sel-list "${list[@]}"
 
 if [ "$REPLY" -gt 0 ]; then
     selected="$reply[REPLY]"
-    print -r -- "$selected"
+    print -r -- "$selected" >&$stdout_FD
 fi
 
 # vim: set filetype=zsh:
