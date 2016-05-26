@@ -1077,10 +1077,21 @@ if [ -t 0 ]; then
         return 1
     fi
 
-    # This loop makes script faster on some Zsh's (e.g. 5.0.8)
-    repeat 1; do
-        list=( `"$@"` )
-    done
+    # Form: zsh-select -- data1 data2 ...
+    if [ "$1" = "--" ]; then
+        shift
+        list=( "$@" )
+    # Form: zsh-select -c command arg1 arg2 ...
+    elif [ "$1" = "-c" ]; then
+        shift
+        # This loop makes script faster on some Zsh's (e.g. 5.0.8)
+        repeat 1; do
+            list=( `"$@"` )
+        done
+    # Form: zsh-select data1 data2 ...
+    else
+        list=( "$@" )
+    fi
 
     # TODO: $? doesn't reach user
     [ "$?" -eq 127 ] && return $?
