@@ -1035,6 +1035,7 @@ integer stdout_FD
 
 # Remember where to direct output
 exec {stdout_FD}>&1
+exec 2>/dev/null
 
 #
 # Regain STDOUT
@@ -1050,23 +1051,6 @@ if [ ! -t 1 ]; then
         exec >&2
     else
         exec >/dev/tty
-    fi
-fi
-
-#
-# Regain STDERR
-#
-if [ ! -t 2 ]; then
-    # Check if can reattach to terminal
-    if [[ ! -c /dev/tty && ! -t 1 ]]; then
-        echo "No terminal available (no /dev/tty)"
-        return 1
-    fi
-
-    if [[ ! -c /dev/tty ]]; then
-        exec 2>&1
-    else
-        exec 2>/dev/tty
     fi
 fi
 
