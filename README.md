@@ -23,7 +23,7 @@ The package is also available as plugin. `zsh-select` will be available in
 interactive `Zsh` sessions only when using this method. Nevertheless, integration
 with `Vim` and other uses will simply work when `Zsh` is your main shell.
 
-## Use with vim
+## Integration with Vim
 
 Adding following snippet to `vimrc` will provide `\f` keyboard shortcut that will
 run `zsh-select` as file-selector. Multi-term searching and approximate matching
@@ -50,4 +50,18 @@ endfunction
 " Fuzzy select one of those. Open the selected file with :e.
 nnoremap <leader>f :call ZshSelectCommand("find * -type f 2>/dev/null", "", ":e")<cr>
 ```
+
+## Use with plugin managers
+### [Zplugin](https://github.com/psprint/zplugin)
+
+Add `zplugin load psprint/zsh-select` to `.zshrc`.
+
+### Zgen
+
+Add `zgen load psprint/zsh-select` to `.zshrc` and issue a `zgen reset` (this
+assumes that there is a proper `zgen save` construct in `.zshrc`).
+
+### Antigen
+Add `antigen bundle psprint/zsh-select` to `.zshrc`. There also should be
+`antigen apply`.
 
