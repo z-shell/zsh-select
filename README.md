@@ -8,13 +8,20 @@ Zshell and has it's capabilities:
 - curses module
 - approximate matching (`Ctrl-F`)
 
+The file `zsh-select` can be copied to any `bin` directory. `Zsh` will
+serve as say `Ruby`, and `zsh-select` will be a regular program available
+in system. Also, plugin managers often allow easy updates.
+
+Video: https://asciinema.org/a/46955
+
+[![asciicast](https://asciinema.org/a/46955.png)](https://asciinema.org/a/46955)
+
 ## Installation
 
 Simply copy file `zsh-select` to any `bin` directory such as `/usr/local/bin`.
-That's everything that is needed and what is expected.
-
-Nevertheless, for quick download and try, the package is available as plugin.
-This limits use for interactive shells only.
+The package is also available as plugin. `zsh-select` will be available in
+interactive `Zsh` sessions only when using this method. Nevertheless, integration
+with `Vim` and other uses will simply work when `Zsh` is your main shell.
 
 ## Use with vim
 
