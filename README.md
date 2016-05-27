@@ -10,7 +10,7 @@ Zshell and has it's capabilities:
 
 The file `zsh-select` can be copied to any `bin` directory. `Zsh` will
 serve as say `Ruby`, and `zsh-select` will be a regular program available
-in system. Also, plugin managers often allow easy updates.
+in system.
 
 Video: https://asciinema.org/a/46955
 
@@ -21,7 +21,8 @@ Video: https://asciinema.org/a/46955
 Simply copy file `zsh-select` to any `bin` directory such as `/usr/local/bin`.
 The package is also available as plugin. `zsh-select` will be available in
 interactive `Zsh` sessions only when using this method. Nevertheless, integration
-with `Vim` and other uses will simply work when `Zsh` is your main shell.
+with `Vim` and other uses will simply work when `Zsh` is your main shell. Also,
+plugin managers often allow easy updates.
 
 ## Integration with Vim
 
@@ -55,6 +56,8 @@ nnoremap <leader>f :call ZshSelectCommand("find * -type f 2>/dev/null", "", ":e"
 ### [Zplugin](https://github.com/psprint/zplugin)
 
 Add `zplugin load psprint/zsh-select` to `.zshrc`.
+The plugin will be loaded next time you start `Zsh`.
+To update issue `zplugin update psprint/zsh-select` from command line.
 
 ### Zgen
 
