@@ -1064,7 +1064,7 @@ fi
 if [ -t 0 ]; then
     # Check if there is proper input
     if [ "$#" -lt 1 ]; then
-        echo "Usage: n-panelize {command} [option|argument] ... or command | n-panelize"
+        echo "Usage: zsh-select [a [b [c ...]]]"
         return 1
     fi
 
