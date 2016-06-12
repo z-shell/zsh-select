@@ -648,7 +648,7 @@ _sellist_colorify_disp_list() {
 #
 sel-list() {
 
-trap "REPLY=-2; reply=(); return" TERM INT QUIT
+#trap "REPLY=-2; reply=(); return" TERM INT QUIT
 trap "_sellist_exit" EXIT
 
 # Check if there is proper input
@@ -983,6 +983,7 @@ while (( 1 )); do
         zcurses refresh main inner
     fi
 
+    REPLY=-2
     sel-list-input "$NLIST_CURRENT_IDX" "$NLIST_FROM_WHAT_IDX_LIST_IS_SHOWN" \
                     "$page_height" "$page_width" "$last_element" "$NLIST_TEXT_OFFSET" \
                     "$final_key" "$NLIST_IS_SEARCH_MODE" "$NLIST_SEARCH_BUFFER" \
