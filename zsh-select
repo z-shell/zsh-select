@@ -565,6 +565,9 @@ _sellist_status_msg() {
 
 # Prefer tput, then module terminfo
 _sellist_cursor_visibility() {
+    # NOP, because Ctrl-C will cause problems
+    return
+
     if type tput 2>/dev/null 1>&2; then
         [ "$1" = "1" ] && { tput cvvis; tput cnorm }
         [ "$1" = "0" ] && tput civis
