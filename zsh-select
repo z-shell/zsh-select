@@ -28,6 +28,8 @@ local NLIST_INSTANT_SELECT=0
 # those terminals, see: http://psprint.github.io/Fixing-TMux-Screen-and-Linuxs-VT/
 local active_text=reverse
 
+NLIST_START_IN_SEARCH_MODE=1
+
 #######################################################################################
 
 _sellist_has_terminfo=0
