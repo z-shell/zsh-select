@@ -13,9 +13,9 @@ The file `zsh-select` can be copied to any `bin` directory. `Zsh` will
 serve as say `Ruby`, and `zsh-select` will be a regular program available
 in system.
 
-Video: https://asciinema.org/a/46955
+Video: https://asciinema.org/a/48490
 
-[![asciicast](https://asciinema.org/a/46955.png)](https://asciinema.org/a/46955)
+[![asciicast](https://asciinema.org/a/48490.png)](https://asciinema.org/a/48490)
 
 ## Installation
 
