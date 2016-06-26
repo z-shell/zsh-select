@@ -1,7 +1,8 @@
 ## Introduction
 
-A shell command that will display selection list. It is similar to `selecta`
-and other such tools, but uses curses library to do display. It is written in
+A shell command that will display selection list. It is similar to `selecta`,
+but uses curses library to do display, and when compared to `fzf`, the main
+difference is approximate matching instead of fuzzy matching. It is written in
 Zshell and has it's capabilities:
 
 - patterns, allowing multi-term searching
@@ -29,7 +30,7 @@ plugin managers often allow easy updates.
 Adding following snippet to `vimrc` will provide `\f` keyboard shortcut that will
 run `zsh-select` as file-selector. Multi-term searching and approximate matching
 (`Ctrl-F`) will be available. The snippet is based on code from `selecta` github
-page (MIT license).
+page (MIT license):
 
 ```vim
 " Run a given vim command on the results of fuzzy selecting from a given shell
