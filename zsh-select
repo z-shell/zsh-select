@@ -1,11 +1,11 @@
 #!/usr/bin/env zsh
 
 # Configuration variables:
-# - ZSELECT_BOLD
-# - ZSELECT_COLOR_PAIR
-# - ZSELECT_BORDER
-# - ZSELECT_ACTIVE_TEXT
-# - ZSELECT_START_IN_SEARCH_MODE
+# - ZSHSELECT_BOLD
+# - ZSHSELECT_COLOR_PAIR
+# - ZSHSELECT_BORDER
+# - ZSHSELECT_ACTIVE_TEXT
+# - ZSHSELECT_START_IN_SEARCH_MODE
 
 emulate -LR zsh
 setopt extendedglob
@@ -13,15 +13,15 @@ setopt extendedglob
 # Should the list (text, borders) be drawn in bold
 # Value 1 is the default
 local bold=1
-[[ "$ZSELECT_BOLD" = <-> ]] && bold="$ZSELECT_BOLD"
+[[ "$ZSHSELECT_BOLD" = <-> ]] && bold="$ZSHSELECT_BOLD"
 
 # Main color pair (foreground/background)
 local colorpair="white/black"
-[[ "$ZSELECT_COLOR_PAIR" = [[:alnum:]]##/[[:alnum:]]## ]] && colorpair="$ZSELECT_COLOR_PAIR"
+[[ "$ZSHSELECT_COLOR_PAIR" = [[:alnum:]]##/[[:alnum:]]## ]] && colorpair="$ZSHSELECT_COLOR_PAIR"
 
 # Should draw the border?
 local border=0
-[[ "$ZSELECT_BORDER" = <-> ]] && border="$ZSELECT_BORDER"
+[[ "$ZSHSELECT_BORDER" = <-> ]] && border="$ZSHSELECT_BORDER"
 
 # Combinations of colors to try out with Ctrl-T and Ctrl-G
 # The last number is the bold option, 0 or 1
@@ -38,10 +38,10 @@ local NLIST_INSTANT_SELECT=0
 # underline support on that terminal). The same for screen/tmux. You can fix
 # those terminals, see: http://psprint.github.io/Fixing-TMux-Screen-and-Linuxs-VT/
 local active_text=reverse
-[[ "$ZSELECT_ACTIVE_TEXT" = (reverse|underline) ]] && active_text="$ZSELECT_ACTIVE_TEXT"
+[[ "$ZSHSELECT_ACTIVE_TEXT" = (reverse|underline) ]] && active_text="$ZSHSELECT_ACTIVE_TEXT"
 
 NLIST_START_IN_SEARCH_MODE=1
-[[ "$ZSELECT_START_IN_SEARCH_MODE" = <-> ]] && NLIST_START_IN_SEARCH_MODE="$ZSELECT_START_IN_SEARCH_MODE"
+[[ "$ZSHSELECT_START_IN_SEARCH_MODE" = <-> ]] && NLIST_START_IN_SEARCH_MODE="$ZSHSELECT_START_IN_SEARCH_MODE"
 
 #######################################################################################
 
