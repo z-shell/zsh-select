@@ -53,6 +53,19 @@ endfunction
 nnoremap <leader>f :call ZshSelectCommand("find * -type f 2>/dev/null", "", ":e")<cr>
 ```
 
+## Configuring
+
+There are a few environment variables that can be set to alter `Zsh-Select`
+behavior. Values assigned below are the defaults:
+
+```zsh
+export ZSELECT_BOLD="1"                     # The interface will be drawn in bold font. Use "0" for no bold
+export ZSELECT_COLOR_PAIR="white/black"     # Draw in white foreground, black background. Try e.g.: "white/green"
+export ZSELECT_BORDER="0"                   # No border around interface, Use "1" for the border
+export ZSELECT_ACTIVE_TEXT="reverse"        # Mark current element with reversed text. Use "underline" for marking with underline
+export ZSELECT_START_IN_SEARCH_MODE="1"     # Starts Zsh-Select with searching active. "0" will not invoke searching at start.
+```
+
 ## Use with plugin managers
 ### [Zplugin](https://github.com/psprint/zplugin)
 
