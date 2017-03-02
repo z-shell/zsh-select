@@ -13,6 +13,9 @@ The file `zsh-select` can be copied to any `bin` directory. `Zsh` will
 serve as say `Ruby`, and `zsh-select` will be a regular program available
 in system.
 
+Pressing `o` will make elements uniqe. To search again after pressing enter,
+press `/`. Approximate matching mode is activated by `Ctrl-F`.
+
 Video: [asciinema](https://asciinema.org/a/48490). You can resize the video by pressing `Ctrl-+` or `Cmd-+`.
 
 [![asciicast](https://asciinema.org/a/48490.png)](https://asciinema.org/a/48490)
