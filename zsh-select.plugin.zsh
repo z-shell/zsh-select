@@ -3,6 +3,6 @@
 # available in interactive `Zsh` sessions only when using this
 # method.
 
-0="${(%):-%N}" # this gives immunity to functionargzero being unset
-REPO_DIR="${0%/*}"
-path+=( "$REPO_DIR" )
+0="${${ZERO:-${0:#$ZSH_ARGZERO}}:-${(%):-%N}}"
+0="${${(M)0:#/*}:-$PWD/$0}"
+path+=( "${0:h}" )
