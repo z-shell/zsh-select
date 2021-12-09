@@ -73,11 +73,11 @@ export ZSHSELECT_START_IN_SEARCH_MODE="1"   # Starts Zsh-Select with searching a
 
 ## Use with plugin managers
 
-### [Zinit](https://github.com/z-shell/zinit)
+### [ZI](https://github.com/z-shell/zi)
 
-Add `zinit load z-shell/zsh-select` to `.zshrc`.
+Add `zi load z-shell/zsh-select` to `.zshrc`.
 The plugin will be loaded next time you start `Zsh`.
-To update issue `zinit update z-shell/zsh-select` from command line.
+To update issue `zi update z-shell/zsh-select` from command line.
 
 ### Zgen
 
