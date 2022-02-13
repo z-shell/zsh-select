@@ -1,4 +1,9 @@
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=D6XDCHDSBDSDG)
+<h2 align="center">
+  <a href="https://github.com/z-shell/zi">
+    <img src="https://github.com/z-shell/zi/raw/main/docs/images/logo.svg" alt="Logo" width="80" height="80">
+  </a>
+❮ ZI ❯ Plugin - Select
+</h2>
 
 ## Introduction
 
@@ -72,18 +77,20 @@ export ZSHSELECT_START_IN_SEARCH_MODE="1"   # Starts Zsh-Select with searching a
 ```
 
 ## Use with plugin managers
-### [Zplugin](https://github.com/psprint/zplugin)
 
-Add `zplugin load psprint/zsh-select` to `.zshrc`.
+### [ZI](https://github.com/z-shell/zi)
+
+Add `zi load z-shell/zsh-select` to `.zshrc`.
 The plugin will be loaded next time you start `Zsh`.
-To update issue `zplugin update psprint/zsh-select` from command line.
+To update issue `zi update z-shell/zsh-select` from command line.
 
 ### Zgen
 
-Add `zgen load psprint/zsh-select` to `.zshrc` and issue a `zgen reset` (this
+Add `zgen load z-shell/zsh-select` to `.zshrc` and issue a `zgen reset` (this
 assumes that there is a proper `zgen save` construct in `.zshrc`).
 
 ### Antigen
-Add `antigen bundle psprint/zsh-select` to `.zshrc`. There also should be
+
+Add `antigen bundle z-shell/zsh-select` to `.zshrc`. There also should be
 `antigen apply`.
 
