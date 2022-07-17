@@ -1,9 +1,9 @@
-<h2 align="center">
+<h1 align="center">
   <a href="https://github.com/z-shell/zi">
-    <img src="https://github.com/z-shell/zi/raw/main/docs/images/logo.svg" alt="Logo" width="80" height="80">
+    <img src="https://github.com/z-shell/zi/raw/main/docs/images/logo.svg" alt="Logo" width="60px" height="60px">
   </a>
 ❮ ZI ❯ Plugin - Select
-</h2>
+</h1>
 
 ## Introduction
 
@@ -93,4 +93,3 @@ assumes that there is a proper `zgen save` construct in `.zshrc`).
 
 Add `antigen bundle z-shell/zsh-select` to `.zshrc`. There also should be
 `antigen apply`.
-
