@@ -3,7 +3,11 @@
     <img src="https://github.com/z-shell/zi/raw/main/docs/images/logo.svg" alt="Logo" width="60px" height="60px">
   </a>
 ❮ ZI ❯ Plugin - Select
-</h1>
+</h1><p align="center">
+  <a href="https://asciinema.org/a/48490" target="_blank"><img src="https://asciinema.org/a/48490.svg" /></a>
+</p><p>
+  Video: <a href="https://asciinema.org/a/48490" target="_blank">Asciinema</a>. You can resize the video by pressing <code>Ctrl-+</code> or <code>Cmd-+</code>.
+</p>
 
 ## Introduction
 
@@ -22,10 +26,6 @@ in system.
 
 Pressing `o` will make elements uniqe. To search again after pressing enter,
 press `/`. Approximate matching mode is activated by `Ctrl-F`.
-
-Video: [asciinema](https://asciinema.org/a/48490). You can resize the video by pressing `Ctrl-+` or `Cmd-+`.
-
-[![asciicast](https://asciinema.org/a/48490.png)](https://asciinema.org/a/48490)
 
 ## Installation
 
