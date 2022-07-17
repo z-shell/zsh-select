@@ -13,3 +13,12 @@
 if [[ $PMSPEC != *f* ]] {
   fpath+=( "${0:h}/functions" )
 }
+
+# Standard Plugins Hash
+# https://z.digitalclouds.dev/community/zsh_plugin_standard#standard-plugins-hash
+typeset -gA Plugins
+Plugins[ZSH_SELECT_DIR]=${0:h}
+
+# The Proposed Function-Name Prefixes
+# https://z.digitalclouds.dev/community/zsh_plugin_standard#the-proposed-function-name-prefixes
+autoload -Uz zsh-select
