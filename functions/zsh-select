@@ -1,5 +1,6 @@
 #!/usr/bin/env zsh
 # -*- mode: zsh; sh-indentation: 2; indent-tabs-mode: nil; sh-basic-offset: 2; -*-
+# vim: ft=zsh sw=2 ts=2 et
 #
 # Configuration variables:
 # - ZSHSELECT_BOLD
@@ -8,8 +9,8 @@
 # - ZSHSELECT_ACTIVE_TEXT
 # - ZSHSELECT_START_IN_SEARCH_MODE
 
-emulate -LR zsh
-setopt extendedglob
+builtin emulate -RL zsh ${=${options[xtrace]:#off}:+-o xtrace}
+builtin setopt extended_glob warn_create_global typeset_silent no_short_loops rc_quotes no_auto_pushd
 
 # Should the list (text, borders) be drawn in bold
 # Value 1 is the default
@@ -1127,5 +1128,3 @@ if [ "$REPLY" -gt 0 ]; then
     selected="$reply[REPLY]"
     print -r -- "$selected" >&$stdout_FD
 fi
-
-# vim: ft=zsh sw=2 ts=2 et
