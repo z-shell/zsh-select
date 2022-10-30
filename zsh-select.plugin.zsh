@@ -5,20 +5,18 @@
 # The package is also available as plugin. `zsh-select` will be
 # available in interactive `Zsh` sessions only when using this method.
 #
-# https://z.digitalclouds.dev/community/zsh_plugin_standard#zero-handling
+# https://wiki.zshell.dev/community/zsh_plugin_standard#zero-handling
 0="${ZERO:-${${0:#$ZSH_ARGZERO}:-${(%):-%N}}}"
 0="${${(M)0:#/*}:-$PWD/$0}"
 
-# https://z.digitalclouds.dev/community/zsh_plugin_standard#funtions-directory
+# https://wiki.zshell.dev/community/zsh_plugin_standard#funtions-directory
 if [[ $PMSPEC != *f* ]] {
   fpath+=( "${0:h}/functions" )
 }
 
 # Standard Plugins Hash
-# https://z.digitalclouds.dev/community/zsh_plugin_standard#standard-plugins-hash
+# https://wiki.zshell.dev/community/zsh_plugin_standard#standard-plugins-hash
 typeset -gA Plugins
 Plugins[ZSH_SELECT_DIR]=${0:h}
 
-# The Proposed Function-Name Prefixes
-# https://z.digitalclouds.dev/community/zsh_plugin_standard#the-proposed-function-name-prefixes
 autoload -Uz zsh-select
